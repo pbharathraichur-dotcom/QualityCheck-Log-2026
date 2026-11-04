@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Production build
+dist/
+client/dist/
+
+# Local databases & persistent storage
+server/data/
+data/
+*.wt
+mongod.lock
+
+# Environment & Logs
+.env
+server/.env
+*.log
+npm-debug.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
