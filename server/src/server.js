@@ -42,9 +42,12 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Serve Frontend static assets in production or when client/dist exists
+// Serve Frontend static assets in production or when client/dist / public exists
 const clientDistCandidates = [
+  path.resolve(__dirname, '../public'),
   path.resolve(__dirname, '../../client/dist'),
+  path.resolve(process.cwd(), 'public'),
+  path.resolve(process.cwd(), 'server/public'),
   path.resolve(process.cwd(), 'client/dist'),
   path.resolve(process.cwd(), '../client/dist')
 ];
