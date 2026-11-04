@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "QualityCheck Log – Small Batch Quality Inspection System",
   "scripts": {
-    "server": "cd server && npm start",
-    "server:dev": "cd server && npm run dev",
-    "client": "cd client && npm run dev",
-    "build": "cd client && npm run build",
+    "start": "node server/src/server.js",
+    "build": "npm --prefix server install && npm --prefix client install && npm --prefix client run build",
+    "build:render": "npm --prefix server install && npm --prefix client install && npm --prefix client run build",
     "test:server": "cd server && npm test",
     "test:persistence": "cd server && npm run test:persistence"
   },
